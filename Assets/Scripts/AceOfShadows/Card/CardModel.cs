@@ -114,6 +114,8 @@ namespace SoftgamesAssignment.Card
                     Debug.Log("TakeCardsProcess was canceled.");
                 }
             } while (_hidenCards.Count > 0);
+            
+            IsAllCardsShown.Value = true;
         }
     }
 }
