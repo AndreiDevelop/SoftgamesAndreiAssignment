@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 417705002155682116}
   - component: {fileID: 9115797821637288455}
   m_Layer: 0
-  m_Name: Background
+  m_Name: BackgroundBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -290,8 +290,9 @@ MonoBehaviour:
   _textName: {fileID: 544442632881393242}
   _icon: {fileID: 7482844775255085538}
   _background: {fileID: 443627324956800865}
-  _flipDurationInSeconds: 0.5
-  _flipEase: 27
+  _iconBack: {fileID: 8961199268699345652}
+  _backgroundBack: {fileID: 9115797821637288455}
+  _cardAnimationSettings: {fileID: 11400000, guid: 7c3ad6eae5bed409fb2e27e08084fc3b, type: 2}
 --- !u!1 &6956461878726097636
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +304,7 @@ GameObject:
   - component: {fileID: 3998260335053965349}
   - component: {fileID: 8961199268699345652}
   m_Layer: 0
-  m_Name: Icon
+  m_Name: IconBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -579,7 +580,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 1
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &544442632881393242
 MonoBehaviour:

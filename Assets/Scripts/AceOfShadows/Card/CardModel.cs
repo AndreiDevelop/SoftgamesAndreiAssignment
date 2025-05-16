@@ -11,7 +11,7 @@ namespace SoftgamesAssignment.Card
 {
     public class CardModel
     {
-        public ReactiveProperty<CardData> TopCard { get; } = new ReactiveProperty<CardData>();
+        public ReactiveCommand<int> OnGetTopCard { get; } = new ReactiveCommand<int>();
         public ReactiveProperty<bool> IsAllCardsShown { get; } = new ReactiveProperty<bool>(false);
         public ReactiveCommand<List<CardData>> OnDeckCreated { get; } = new ReactiveCommand<List<CardData>>();
         public ReactiveCommand OnDeckCleared { get; } = new ReactiveCommand();
@@ -21,16 +21,15 @@ namespace SoftgamesAssignment.Card
         
         private Stack<CardData> _hidenCards = new Stack<CardData>();
         private CardsDataSO _cardsDataSO;
+        private CardAnimationSettingsSO _cardAnimationSettingsSO;
         
-        private int _delayTakeTopCardInMilliseconds = 1000;
         private CancellationDisposable _cancellationTakeCardDisposable = new CancellationDisposable();
         
-        public CardModel(CardsDataSO cardsDataSO)
+        public CardModel(CardsDataSO cardsDataSO, CardAnimationSettingsSO cardAnimationSettingsSO)
         {
             _cardsDataSO = cardsDataSO;
+            _cardAnimationSettingsSO = cardAnimationSettingsSO;
             CreateDeck();
-
-            StartTakeCardProcess();
         }
 
         public void StartTakeCardProcess()
@@ -76,7 +75,7 @@ namespace SoftgamesAssignment.Card
             }
         }
 
-        private void TakeCardFromTop()
+        private void TakeCardFromTop(int cardOrder)
         {
             if(_hidenCards.Count == 0)
             {
@@ -85,9 +84,9 @@ namespace SoftgamesAssignment.Card
                 return;
             }
             
-            var topCard = _hidenCards.Pop();
-            
-            TopCard.Value = topCard;
+            _hidenCards.Pop();
+
+            OnGetTopCard?.Execute(cardOrder);
         }
 
         private async UniTaskVoid TakeCardsProcess(CancellationToken cancellationToken)
@@ -99,18 +98,22 @@ namespace SoftgamesAssignment.Card
                 return;
             }
 
+            int cardOrder = 0;
             do
             {
                 try
                 {
-                    await UniTask.Delay(_delayTakeTopCardInMilliseconds, cancellationToken: cancellationToken);
-                    TakeCardFromTop();
+                    await UniTask.Delay(_cardAnimationSettingsSO.DelayTakeTopCardInMilliseconds, 
+                        cancellationToken: cancellationToken);
+                    
+                    TakeCardFromTop(cardOrder);
+                    cardOrder++;
                 }
                 catch (OperationCanceledException)
                 {
                     Debug.Log("TakeCardsProcess was canceled.");
                 }
-            } while (_hidenCards.Count>0);
+            } while (_hidenCards.Count > 0);
         }
     }
 }
