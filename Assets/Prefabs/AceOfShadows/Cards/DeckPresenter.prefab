@@ -163,6 +163,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StackPresenterLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 3096521346727097162, guid: c96233a656bf640b8876f2e3d203f9e3, type: 3}
+      propertyPath: _inverseCounter
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6820724081258876847, guid: c96233a656bf640b8876f2e3d203f9e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.8
