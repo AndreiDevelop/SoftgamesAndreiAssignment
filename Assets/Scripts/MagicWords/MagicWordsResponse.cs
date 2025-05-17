@@ -1,9 +1,8 @@
 using System.Collections.Generic;
-using MagicWords.Avatar;
-using MagicWords.Dialogue;
-using UnityEngine;
+using SoftgamesAssignment.MagicWords.Avatar;
+using SoftgamesAssignment.MagicWords.Dialogue;
 
-namespace MagicWords
+namespace SoftgamesAssignment.MagicWords
 {
     [System.Serializable]
     public struct MagicWordsResponse

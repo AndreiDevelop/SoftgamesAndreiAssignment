@@ -1,4 +1,6 @@
-using MagicWords.Dialogue;
+
+
+using SoftgamesAssignment.MagicWords.Dialogue;
 using UniRx;
 using UnityEngine;
 using Zenject;

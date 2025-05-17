@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using MagicWords.Avatar;
+using SoftgamesAssignment.MagicWords.Avatar;
 using UniRx;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEngine.Serialization;
 
-namespace MagicWords.Dialogue
+namespace SoftgamesAssignment.MagicWords.Dialogue
 {
     public class DialogueModel : MonoBehaviour
     {

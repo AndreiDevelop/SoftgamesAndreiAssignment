@@ -1,11 +1,11 @@
 using System;
-using MagicWords.Avatar;
+using SoftgamesAssignment.MagicWords.Avatar;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace MagicWords.Dialogue
+namespace SoftgamesAssignment.MagicWords.Dialogue
 {
     public class DialoguePresenter : MonoBehaviour
     {

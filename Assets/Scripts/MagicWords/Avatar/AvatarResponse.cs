@@ -1,6 +1,4 @@
-using UnityEngine;
-
-namespace MagicWords.Avatar
+namespace SoftgamesAssignment.MagicWords.Avatar
 {
     [System.Serializable]
     public struct AvatarResponse

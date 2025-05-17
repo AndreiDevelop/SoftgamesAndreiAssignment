@@ -1,5 +1,4 @@
-using MagicWords.Dialogue;
-using SoftgamesAssignment.Card;
+using SoftgamesAssignment.MagicWords.Dialogue;
 using UnityEngine;
 using Zenject;
 

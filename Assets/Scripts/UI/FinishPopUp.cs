@@ -1,12 +1,6 @@
-using System;
-using MagicWords.Dialogue;
-using SoftgamesAssignment.Card;
 using TMPro;
-using UniRx;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
-using Zenject;
 
 namespace SoftgamesAssignment
 {

@@ -1,6 +1,4 @@
-using UnityEngine;
-
-namespace MagicWords.Dialogue
+namespace SoftgamesAssignment.MagicWords.Dialogue
 {
     [System.Serializable]
     public struct DialogueResponse
