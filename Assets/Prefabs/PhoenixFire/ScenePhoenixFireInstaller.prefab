@@ -63,7 +63,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _parentNewObjectsUnderSceneContext: 0
-  _contractNames: []
+  _contractNames:
+  - ScenePhoenixFireInstaller
   _parentContractNames: []
 --- !u!114 &2965846972234384872
 MonoBehaviour:
