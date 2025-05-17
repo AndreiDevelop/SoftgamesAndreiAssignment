@@ -9,6 +9,9 @@ namespace SoftgamesAssignment.MagicWords.Dialogue
 {
     public class DialogueModel : MonoBehaviour
     {
+        [SerializeField]
+        private DialogueParserSO _dialogueParserSO;
+        
         [SerializeField] 
         private Sprite _defaultAvatarSprite;
 
@@ -25,7 +28,7 @@ namespace SoftgamesAssignment.MagicWords.Dialogue
         {
             StartCoroutine(LoadDialogueData());
         }
-
+        
         public DialogueResponse GetNextDialogue()
         {
             if (_dialogueQueue.Count == 0)
@@ -56,8 +59,12 @@ namespace SoftgamesAssignment.MagicWords.Dialogue
             
             _dialogueQueue = new Queue<DialogueResponse>();
 
-            foreach (var dialogue in data.dialogue)
+            for(int i=0;i<data.dialogue.Count;i++)
             {
+                var dialogue = data.dialogue[i];
+                
+                dialogue.text = _dialogueParserSO.ParseText(dialogue.text);
+                
                 _dialogueQueue.Enqueue(dialogue);
             }
             

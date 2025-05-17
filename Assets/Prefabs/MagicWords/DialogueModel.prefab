@@ -44,8 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e859a8246102d4e0d9d116fa99c1bf47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dialogueParserSO: {fileID: 11400000, guid: 7e597e388ced349c6969be0d8957dac4, type: 2}
   _defaultAvatarSprite: {fileID: 21300000, guid: b76446236559e4a7ebfbdc6519fa9d07, type: 3}
-  AvatarDatas:
-    value: []
-  DialogueDatas:
-    value: []
+  OnDialogueFinished:
+    value: 0
