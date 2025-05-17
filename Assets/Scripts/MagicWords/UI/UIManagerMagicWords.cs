@@ -22,12 +22,9 @@ namespace SoftgamesAssignment
             if (_dialogueModel != null)
             {
                 _dialogueModel.OnDialogueFinished
-                    .Subscribe(isFinished =>
+                    .Subscribe(_ =>
                     {
-                        if (isFinished)
-                        {
-                            _finishPopUp.Activate(_textFinishPopUpDescription);
-                        }
+                        _finishPopUp.Activate(_textFinishPopUpDescription);
                     }).AddTo(this);
             }
         }

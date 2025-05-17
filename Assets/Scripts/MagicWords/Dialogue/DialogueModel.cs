@@ -15,7 +15,7 @@ namespace SoftgamesAssignment.MagicWords.Dialogue
         [SerializeField] 
         private Sprite _defaultAvatarSprite;
 
-        public ReactiveProperty<bool> OnDialogueFinished = new ReactiveProperty<bool>(false);
+        public ReactiveCommand OnDialogueFinished = new ReactiveCommand();
 
         private List<AvatarData> _avatarDatas = new List<AvatarData>();
         private Queue<DialogueResponse> _dialogueQueue = new Queue<DialogueResponse>();
@@ -33,7 +33,7 @@ namespace SoftgamesAssignment.MagicWords.Dialogue
         {
             if (_dialogueQueue.Count == 0)
             {
-                OnDialogueFinished.Value = true;
+                OnDialogueFinished.Execute();
                 return default;
             }
 
