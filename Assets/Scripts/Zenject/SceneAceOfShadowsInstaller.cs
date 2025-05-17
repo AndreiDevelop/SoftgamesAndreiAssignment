@@ -1,4 +1,4 @@
-using SoftgamesAssignment.Card;
+using SoftgamesAssignment.AceOfShadows.Card;
 using UnityEngine;
 using Zenject;
 

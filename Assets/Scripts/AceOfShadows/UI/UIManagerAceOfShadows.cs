@@ -1,9 +1,9 @@
-using SoftgamesAssignment.Card;
+using SoftgamesAssignment.AceOfShadows.Card;
 using UniRx;
 using UnityEngine;
 using Zenject;
 
-namespace SoftgamesAssignment
+namespace SoftgamesAssignment.AceOfShadows
 {
     public class UIManagerAceOfShadows : MonoBehaviour
     {

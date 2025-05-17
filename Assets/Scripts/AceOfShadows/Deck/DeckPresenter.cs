@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using NUnit.Framework;
-using SoftgamesAssignment.Card;
+using SoftgamesAssignment.AceOfShadows.Card;
 using UniRx;
 using UnityEngine;
 using Zenject;
 
-namespace SoftgamesAssignment
+namespace SoftgamesAssignment.AceOfShadows
 {
     public class DeckPresenter : MonoBehaviour
     {

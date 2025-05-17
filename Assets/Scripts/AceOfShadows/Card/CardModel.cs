@@ -7,7 +7,7 @@ using UnityEngine;
 using UniRx;
 using Random = UnityEngine.Random;
 
-namespace SoftgamesAssignment.Card
+namespace SoftgamesAssignment.AceOfShadows.Card
 {
     public class CardModel
     {

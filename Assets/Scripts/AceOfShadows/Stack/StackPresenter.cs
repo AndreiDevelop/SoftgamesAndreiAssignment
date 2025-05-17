@@ -1,10 +1,10 @@
-using SoftgamesAssignment.Card;
+using SoftgamesAssignment.AceOfShadows.Card;
 using TMPro;
 using UniRx;
 using UnityEngine;
 using Zenject;
 
-namespace SoftgamesAssignment
+namespace SoftgamesAssignment.AceOfShadows
 {
     public class StackPresenter : MonoBehaviour
     {

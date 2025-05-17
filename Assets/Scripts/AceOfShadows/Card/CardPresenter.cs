@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using DG.Tweening;
 
-namespace SoftgamesAssignment.Card
+namespace SoftgamesAssignment.AceOfShadows.Card
 {
     public class CardPresenter : MonoBehaviour
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SoftgamesAssignment.Card
+namespace SoftgamesAssignment.AceOfShadows.Card
 {
     [System.Serializable]
     public struct CardDataEntity

@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-namespace SoftgamesAssignment.Card
+namespace SoftgamesAssignment.AceOfShadows.Card
 {
     [CreateAssetMenu(fileName = "CardAnimationSettingsSO", menuName = "Scriptable Objects/new CardAnimationSettingsSO")]
     public class CardAnimationSettingsSO : ScriptableObject
