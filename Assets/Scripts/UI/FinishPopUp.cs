@@ -1,7 +1,10 @@
 using System;
+using MagicWords.Dialogue;
 using SoftgamesAssignment.Card;
+using TMPro;
 using UniRx;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Zenject;
 
@@ -10,22 +13,15 @@ namespace SoftgamesAssignment
     public class FinishPopUp : MonoBehaviour
     {
         [SerializeField] private GameObject _holder;
+        [SerializeField] private TextMeshProUGUI _textDescription;
         [SerializeField] private Button _buttonOk;
         
-        [Inject] private CardModel _cardModel;
-        
-        void Start()
+        public void Activate(string text)
         {
-            _cardModel.IsAllCardsShown
-                .Subscribe(isAllCardsShown =>
-                {
-                    if (isAllCardsShown)
-                    {
-                        _holder.SetActive(true);
-                    }
-                }).AddTo(this);
+            _textDescription.text = text;
+            _holder.SetActive(true);
         }
-
+        
         private void OnEnable()
         {
             _buttonOk.onClick.AddListener(LoadMenuScene);

@@ -15,7 +15,6 @@ namespace MagicWords.Dialogue
         private Sprite _defaultAvatarSprite;
 
         public ReactiveProperty<bool> OnDialogueFinished = new ReactiveProperty<bool>(false);
-        
 
         private List<AvatarData> _avatarDatas = new List<AvatarData>();
         private Queue<DialogueResponse> _dialogueQueue = new Queue<DialogueResponse>();

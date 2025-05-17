@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _holder: {fileID: 4875111077481541190}
+  _textDescription: {fileID: 3481606845287468135}
   _buttonOk: {fileID: 126911073851100265}
 --- !u!1 &2694405665331136382
 GameObject:
