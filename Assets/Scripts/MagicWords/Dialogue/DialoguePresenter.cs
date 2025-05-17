@@ -1,4 +1,5 @@
 using System;
+using Cysharp.Threading.Tasks;
 using SoftgamesAssignment.MagicWords.Avatar;
 using TMPro;
 using UnityEngine;
@@ -33,12 +34,12 @@ namespace SoftgamesAssignment.MagicWords.Dialogue
 
         private void OnEnable()
         {
-            _buttonNext.onClick.AddListener(LoadNextDialogue);
+            _buttonNext.onClick.AddListener(LoadDialog);
         }
 
         private void OnDisable()
         {
-            _buttonNext.onClick.RemoveListener(LoadNextDialogue);
+            _buttonNext.onClick.RemoveListener(LoadDialog);
         }
 
         private void SetEmptyValues()
@@ -49,10 +50,15 @@ namespace SoftgamesAssignment.MagicWords.Dialogue
             _rightAvatar.sprite = _emptyAvatar;
             _rightText.text = _emptyText;
         }
-        
-        private void LoadNextDialogue()
+
+        private void LoadDialog()
         {
-            var dialog = _dialogueModel.GetNextDialogue();
+            LoadNextDialogue().Forget();
+        }
+        
+        private async UniTaskVoid LoadNextDialogue()
+        {
+            var dialog = await _dialogueModel.GetNextDialogue();
 
             if (dialog.Equals(default(DialogueResponse)))
             {

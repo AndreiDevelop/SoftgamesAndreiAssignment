@@ -11,6 +11,8 @@ namespace SoftgamesAssignment.MagicWords
         
         public override void InstallBindings()
         {
+            _dialogueModel.Initialize();
+            
             Container.Bind<DialogueModel>()
                 .FromInstance(_dialogueModel)
                 .AsSingle();
