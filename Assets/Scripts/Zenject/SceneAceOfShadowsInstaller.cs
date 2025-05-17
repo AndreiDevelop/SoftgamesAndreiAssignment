@@ -2,7 +2,7 @@ using SoftgamesAssignment.Card;
 using UnityEngine;
 using Zenject;
 
-namespace SoftgamesAssignment
+namespace SoftgamesAssignment.AceOfShadows
 {
     public class SceneAceOfShadowsInstaller : MonoInstaller
     {

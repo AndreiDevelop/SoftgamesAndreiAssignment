@@ -2,7 +2,7 @@ using SoftgamesAssignment.MagicWords.Dialogue;
 using UnityEngine;
 using Zenject;
 
-namespace MagicWords
+namespace SoftgamesAssignment.MagicWords
 {
     public class SceneMagicWordsInstaller: MonoInstaller
     {
